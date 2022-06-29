@@ -22,110 +22,121 @@ if (process.env.HARDHAT_FORK) {
 }
 
 let config: HardhatUserConfig = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "pulsechain_testnet",
   networks: {
-    hardhat: {
-      deploy: ["./deploy/hardhat/"],
-      autoImpersonate: true,
-    },
-    mainnet: {
-      url: ALCHEMY_BASE_URL[CHAIN_ID.MAINNET] + process.env.ALCHEMY_API_KEY,
-      deploy: ["./deploy/mainnet/"],
-      verify: {
-        etherscan: {
-          apiUrl: "https://api.etherscan.io",
-          apiKey: process.env.ETHERSCAN_API ?? "NO_KEY",
-        },
-      },
-    },
-    ropsten: {
-      url: ALCHEMY_BASE_URL[CHAIN_ID.ROPSTEN] + process.env.ALCHEMY_API_KEY,
+    pulsechain_testnet: {
+      url: ALCHEMY_BASE_URL[CHAIN_ID.PULSECHAIN_TESTNET],
+      chainId: 941,
+      gas: 100000000000,
+      gasPrice: 10000000000,
+      gasMultiplier: 2,
       accounts: {
         mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
       },
-      deploy: ["./deploy/ropsten/"],
+      deploy: ["./deploy/pulsechain_testnet/"],
     },
-    arbitrum_testnet: {
-      url:
-        ALCHEMY_BASE_URL[CHAIN_ID.ARBITRUM_TESTNET] +
-        process.env.ALCHEMY_API_KEY,
-      chainId: 421611,
-      accounts: {
-        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
-      },
-      deploy: ["./deploy/arbitrum/"],
-    },
-    arbitrum_mainnet: {
-      url:
-        ALCHEMY_BASE_URL[CHAIN_ID.ARBITRUM_MAINNET] +
-        process.env.ALCHEMY_API_KEY,
-      chainId: 42161,
-      deploy: ["./deploy/arbitrum/"],
-      verify: {
-        etherscan: {
-          apiUrl: "https://api.arbiscan.io",
-          apiKey: process.env.ETHERSCAN_API ?? "NO_KEY",
-        },
-      },
-    },
-    optimism_testnet: {
-      url: "https://kovan.optimism.io",
-      chainId: 69,
-      accounts: {
-        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
-      },
-      deploy: ["./deploy/optimism/"],
-    },
-    optimism_mainnet: {
-      url: "https://mainnet.optimism.io",
-      chainId: 10,
-      deploy: ["./deploy/optimism/"],
-    },
-    fantom_testnet: {
-      url: "https://rpc.testnet.fantom.network/",
-      chainId: 4002,
-      accounts: {
-        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
-      },
-      deploy: ["./deploy/fantom/"],
-    },
-    fantom_mainnet: {
-      url: "https://rpc.ftm.tools/",
-      chainId: 250,
-      deploy: ["./deploy/fantom/"],
-    },
-    evmos_testnet: {
-      url: "https://eth.bd.evmos.dev:8545",
-      chainId: 9000,
-      deploy: ["./deploy/evmos_testnet/"],
-      accounts: {
-        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
-      },
-    },
-    evmos_mainnet: {
-      live: true,
-      url: "https://eth.bd.evmos.org:8545",
-      chainId: 9001,
-      deploy: ["./deploy/evmos/"],
-      verify: {
-        etherscan: {
-          apiUrl: "https://evm.evmos.org",
-        },
-      },
-    },
-    kava_testnet: {
-      url: "https://evm.evm-alpha.kava.io",
-      chainId: 2221,
-      deploy: ["./deploy/kava_testnet/"],
-      verify: {
-        etherscan: {
-          apiUrl: "https://explorer.evm-alpha.kava.io",
-        },
-      },
-      accounts: {
-        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
-      },
-    },
+    // hardhat: {
+    //   deploy: ["./deploy/hardhat/"],
+    //   autoImpersonate: true,
+    // },
+    // mainnet: {
+    //   url: ALCHEMY_BASE_URL[CHAIN_ID.MAINNET] + process.env.ALCHEMY_API_KEY,
+    //   deploy: ["./deploy/mainnet/"],
+    //   verify: {
+    //     etherscan: {
+    //       apiUrl: "https://api.etherscan.io",
+    //       apiKey: process.env.ETHERSCAN_API ?? "NO_KEY",
+    //     },
+    //   },
+    // },
+    // ropsten: {
+    //   url: ALCHEMY_BASE_URL[CHAIN_ID.ROPSTEN] + process.env.ALCHEMY_API_KEY,
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    //   deploy: ["./deploy/ropsten/"],
+    // },
+    // arbitrum_testnet: {
+    //   url:
+    //     ALCHEMY_BASE_URL[CHAIN_ID.ARBITRUM_TESTNET] +
+    //     process.env.ALCHEMY_API_KEY,
+    //   chainId: 421611,
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    //   deploy: ["./deploy/arbitrum/"],
+    // },
+    // arbitrum_mainnet: {
+    //   url:
+    //     ALCHEMY_BASE_URL[CHAIN_ID.ARBITRUM_MAINNET] +
+    //     process.env.ALCHEMY_API_KEY,
+    //   chainId: 42161,
+    //   deploy: ["./deploy/arbitrum/"],
+    //   verify: {
+    //     etherscan: {
+    //       apiUrl: "https://api.arbiscan.io",
+    //       apiKey: process.env.ETHERSCAN_API ?? "NO_KEY",
+    //     },
+    //   },
+    // },
+    // optimism_testnet: {
+    //   url: "https://kovan.optimism.io",
+    //   chainId: 69,
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    //   deploy: ["./deploy/optimism/"],
+    // },
+    // optimism_mainnet: {
+    //   url: "https://mainnet.optimism.io",
+    //   chainId: 10,
+    //   deploy: ["./deploy/optimism/"],
+    // },
+    // fantom_testnet: {
+    //   url: "https://rpc.testnet.fantom.network/",
+    //   chainId: 4002,
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    //   deploy: ["./deploy/fantom/"],
+    // },
+    // fantom_mainnet: {
+    //   url: "https://rpc.ftm.tools/",
+    //   chainId: 250,
+    //   deploy: ["./deploy/fantom/"],
+    // },
+    // evmos_testnet: {
+    //   url: "https://eth.bd.evmos.dev:8545",
+    //   chainId: 9000,
+    //   deploy: ["./deploy/evmos_testnet/"],
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    // },
+    // evmos_mainnet: {
+    //   live: true,
+    //   url: "https://eth.bd.evmos.org:8545",
+    //   chainId: 9001,
+    //   deploy: ["./deploy/evmos/"],
+    //   verify: {
+    //     etherscan: {
+    //       apiUrl: "https://evm.evmos.org",
+    //     },
+    //   },
+    // },
+    // kava_testnet: {
+    //   url: "https://evm.evm-alpha.kava.io",
+    //   chainId: 2221,
+    //   deploy: ["./deploy/kava_testnet/"],
+    //   verify: {
+    //     etherscan: {
+    //       apiUrl: "https://explorer.evm-alpha.kava.io",
+    //     },
+    //   },
+    //   accounts: {
+    //     mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+    //   },
+    // },
   },
   paths: {
     sources: "./contracts",
@@ -190,6 +201,7 @@ let config: HardhatUserConfig = {
       9001: 0, // use the same address on evmos mainnnet
       2221: 0, // use the same address on kava testnet
       3: 0, // use the same address on ropsten
+      941: 0, // use the same addess on pulsechain testnet
     },
     libraryDeployer: {
       default: 1, // use a different account for deploying libraries on the hardhat network
@@ -201,6 +213,7 @@ let config: HardhatUserConfig = {
       9001: 0, // use the same address on evmos mainnnet
       2221: 0, // use the same address on kava testnet
       3: 0, // use the same address on ropsten
+      941: 0, // use the same addess on pulsechain testnet
     },
   },
   spdxLicenseIdentifier: {
