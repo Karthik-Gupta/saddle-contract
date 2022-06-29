@@ -1,4 +1,8 @@
 const DEPLOYMENTS_TO_NETWORK = {
+  pulsechain_testnet: {
+    id: 941,
+    test: true,
+  },
   arbitrum_mainnet: {
     id: 42161,
     test: false,
