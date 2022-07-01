@@ -7,7 +7,7 @@ const META_POOL_NAME = "TuringTBTCMetaPool"
 const META_POOL_LP_TOKEN_NAME = `${META_POOL_NAME}LPToken`
 const BASE_POOL_NAME = "TuringBTCPool"
 // Constructor arguments
-const TOKEN_NAMES = ["TUSD", `${BASE_POOL_NAME}LPToken`]
+const TOKEN_NAMES = ["TBTC", `${BASE_POOL_NAME}LPToken`]
 const TOKEN_DECIMALS = [18, 18]
 const LP_TOKEN_NAME = "Turing TBTC/turingBTC"
 const LP_TOKEN_SYMBOL = "turingTBTC-BTC"
