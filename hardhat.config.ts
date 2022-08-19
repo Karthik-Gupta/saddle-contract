@@ -1,3 +1,4 @@
+import "@nomiclabs/hardhat-vyper"
 import "@nomiclabs/hardhat-ethers"
 import "@nomiclabs/hardhat-waffle"
 import "@nomiclabs/hardhat-web3"
@@ -191,6 +192,16 @@ let config: HardhatUserConfig = {
       },
     },
   },
+  vyper: {
+    compilers: [
+      { version: "0.2.12" },
+      { version: "0.2.16" },
+      { version: "0.2.15" },
+      { version: "0.2.7" },
+      { version: "0.3.1" },
+      { version: "0.3.2" },
+    ],
+  },
   typechain: {
     outDir: "./build/typechain/",
     target: "ethers-v5",
@@ -235,6 +246,7 @@ let config: HardhatUserConfig = {
       42161: MULTISIG_ADDRESSES[42161],
       10: MULTISIG_ADDRESSES[10],
       250: MULTISIG_ADDRESSES[250],
+      941: MULTISIG_ADDRESSES[941],
     },
   },
   spdxLicenseIdentifier: {
