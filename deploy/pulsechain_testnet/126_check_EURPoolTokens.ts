@@ -5,7 +5,7 @@ import { BigNumber } from "ethers"
 
 const TOKENS_ARGS: { [token: string]: any[] } = {
   EURS: ["Stasis EURO", "EURS", "2"],
-  SEUR: ["Synthetic EURO", "sEUR", "18"],
+  EURT: ["Euro Tether", "EURT", "6"],
   EUROC: ["Euro Coin", "EUROC", "6"],
 }
 
@@ -30,7 +30,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         { from: deployer, log: true },
         "mint",
         deployer,
-        BigNumber.from(10).pow(decimals).mul(1000000),
+        BigNumber.from(10).pow(decimals).mul(100000000),
       )
     } */
   }

@@ -26,58 +26,47 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // TODO: set production initial weight values
   // TODO: add crosschain root gauges
   const newGaugeArr = [
-    { lpToken: "TuringUSDPoolLPToken", gaugeType: 0, initialWeight: 6245 },
-    { lpToken: "TuringD4PoolLPToken", gaugeType: 0, initialWeight: 6250 },
-    { lpToken: "TuringBTCPoolLPToken", gaugeType: 0, initialWeight: 6250 },
-    { lpToken: "TuringSTETHPoolLPToken", gaugeType: 0, initialWeight: 6250 },
-    { lpToken: "TuringRETHPoolLPToken", gaugeType: 0, initialWeight: 6250 },
-    { lpToken: "TuringALETHPoolLPToken", gaugeType: 0, initialWeight: 6250 },
-    { lpToken: "TuringEURPoolLPToken", gaugeType: 0, initialWeight: 6250 },
+    { lpToken: "PascalUSDPoolLPToken", gaugeType: 0, initialWeight: 3495 },
+    { lpToken: "PulseChainUSDPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    { lpToken: "PascalBTCPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    { lpToken: "PascalETHPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    { lpToken: "PascalEuroPoolLPToken", gaugeType: 0, initialWeight: 5500 },
     {
-      lpToken: "TuringFRAXMetaPoolLPToken",
+      lpToken: "PascalFRAXMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringMIMMetaPoolLPToken",
+      lpToken: "PascalFEIMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringSUSDMetaPoolLPToken",
+      lpToken: "PascalCSTMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringFEIMetaPoolLPToken",
+      lpToken: "PascalPWCMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringALUSDMetaPoolLPToken",
+      lpToken: "PascalUSDLMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringTUSDMetaPoolLPToken",
+      lpToken: "PascalTBTCMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
     {
-      lpToken: "TuringUSDLMetaPoolLPToken",
+      lpToken: "PascalBUSDMetaPoolLPToken",
       gaugeType: 0,
-      initialWeight: 6250,
+      initialWeight: 5500,
     },
-    {
-      lpToken: "TuringTBTCMetaPoolLPToken",
-      gaugeType: 0,
-      initialWeight: 6250,
-    },
-    {
-      lpToken: "TuringBUSDMetaPoolLPToken",
-      gaugeType: 0,
-      initialWeight: 6250,
-    },
+    { lpToken: "PulseXPairPSCWPLS", gaugeType: 0, initialWeight: 36000 },
   ]
 
   for (let i = 0; i < newGaugeArr.length; i++) {

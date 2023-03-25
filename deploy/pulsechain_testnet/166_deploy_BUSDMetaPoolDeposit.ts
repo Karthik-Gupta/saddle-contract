@@ -2,11 +2,11 @@ import { HardhatRuntimeEnvironment } from "hardhat/types"
 import { DeployFunction } from "hardhat-deploy/types"
 
 // Deployment names
-const META_POOL_NAME = "TuringBUSDMetaPool"
+const META_POOL_NAME = "PascalBUSDMetaPool"
 const META_POOL_LP_TOKEN_NAME = `${META_POOL_NAME}LPToken`
 const META_POOL_DEPOSIT_NAME = `${META_POOL_NAME}Deposit`
 const TARGET_META_SWAP_DEPOSIT_NAME = `MetaSwapDeposit`
-const BASE_POOL_NAME = `TuringUSDPool`
+const BASE_POOL_NAME = `PascalUSDPool`
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployments, getNamedAccounts } = hre

@@ -108,7 +108,7 @@ def __init__(
     sdl_token: address = Minter(_minter).token()
 
     MINTER = _minter
-    name: String[64] = concat("Saddle ", _lp_symbol, " Root Gauge (Local)")
+    name: String[64] = concat("Pascal ", _lp_symbol, " Root Gauge (Local)")
     NAME = name
     self.admin = _admin
     self.sdl_token = sdl_token

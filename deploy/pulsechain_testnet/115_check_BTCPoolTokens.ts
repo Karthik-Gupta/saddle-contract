@@ -5,7 +5,6 @@ import { HardhatRuntimeEnvironment } from "hardhat/types"
 
 const BTC_TOKENS_ARGS: { [token: string]: any[] } = {
   WBTC: ["Wrapped Bitcoin", "WBTC", "8"],
-  RENBTC: ["renBTC", "RENBTC", "8"],
   SBTC: ["sBTC", "SBTC", "18"],
 }
 

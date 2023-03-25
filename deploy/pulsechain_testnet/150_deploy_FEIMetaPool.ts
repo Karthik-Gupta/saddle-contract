@@ -3,14 +3,14 @@ import { DeployFunction } from "hardhat-deploy/types"
 import { MULTISIG_ADDRESSES } from "../../utils/accounts"
 
 // Deployment names
-const META_POOL_NAME = "TuringFEIMetaPool"
+const META_POOL_NAME = "PascalFEIMetaPool"
 const META_POOL_LP_TOKEN_NAME = `${META_POOL_NAME}LPToken`
-const BASE_POOL_NAME = "TuringUSDPool"
+const BASE_POOL_NAME = "PascalUSDPool"
 // Constructor arguments
 const TOKEN_NAMES = ["FEI", `${BASE_POOL_NAME}LPToken`]
 const TOKEN_DECIMALS = [18, 18]
-const LP_TOKEN_NAME = "Turing FEI/turingUSD"
-const LP_TOKEN_SYMBOL = "turingFEI-USD"
+const LP_TOKEN_NAME = "Pascal FEI/USD"
+const LP_TOKEN_SYMBOL = "pascalFEI-USD"
 const INITIAL_A = 100
 const SWAP_FEE = 4e6 // 4bps
 const ADMIN_FEE = 50e8 // 50%
@@ -84,7 +84,7 @@ export default func
 func.tags = [META_POOL_NAME]
 func.dependencies = [
   "FEIMetaPoolTokens",
-  "TuringUSDPool",
+  "PascalUSDPool",
   "MetaSwapUtils",
   "AmplificationUtils",
 ]

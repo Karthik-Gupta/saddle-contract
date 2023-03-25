@@ -100,7 +100,7 @@ def __init__(
     self.admin = _admin
     self.sdl_token = sdl_token
     self.controller = Minter(_minter).controller()
-    name: String[64] = concat("Saddle ", _lp_symbol, " Root Gauge (Arbitrum)")
+    name: String[64] = concat("Pascal ", _lp_symbol, " Root Gauge (Arbitrum)")
     NAME = name
 
     # because we calculate the rate locally, this gauge cannot

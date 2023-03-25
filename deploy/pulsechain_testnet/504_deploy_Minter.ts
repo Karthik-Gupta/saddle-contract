@@ -12,7 +12,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
     skipIfAlreadyDeployed: true,
     args: [
-      (await get("TUR")).address,
+      (await get("PSC")).address,
       (await get("GaugeController")).address,
       MULTISIG_ADDRESSES[await getChainId()], // emergency admin who recieves the clawback funds
       MULTISIG_ADDRESSES[await getChainId()], // admin to control the reward rate.

@@ -33,7 +33,7 @@ contract PermissionlessDeployer is AccessControl {
     address public targetSwap;
     address public targetMetaSwap;
     address public targetMetaSwapDeposit;
-    string public constant LP_TOKEN_NAME0 = "Saddle ";
+    string public constant LP_TOKEN_NAME0 = "Pascal ";
     string public constant LP_TOKEN_NAME1 = " LP Token";
 
     IPoolRegistry public poolRegistryCached;

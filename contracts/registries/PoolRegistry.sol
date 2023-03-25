@@ -295,7 +295,7 @@ contract PoolRegistry is
                 SADDLE_APPROVED_POOL_OWNER_ROLE,
                 ISwap(poolAddress).owner()
             ),
-            "Pool is not owned by saddle"
+            "Pool is not owned by pascal"
         );
 
         emit UpdatePool(poolAddress, poolIndex, poolData);
@@ -378,7 +378,7 @@ contract PoolRegistry is
     modifier managerOnly() {
         require(
             hasRole(SADDLE_MANAGER_ROLE, msg.sender),
-            "PR: Caller is not saddle manager"
+            "PR: Caller is not pascal manager"
         );
         _;
     }

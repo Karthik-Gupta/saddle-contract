@@ -70,7 +70,7 @@ contract GeneralizedSwapMigrator is Ownable, BaseBoringBatchable {
             try ISwap(oldPoolAddress).getToken(i) returns (IERC20 token) {
                 oldPoolToken = address(token);
             } catch {
-                require(i > 0, "Failed to get tokens underlying Saddle pool.");
+                require(i > 0, "Failed to get tokens underlying Pascal pool.");
                 oldPoolToken = address(0);
             }
 
@@ -81,7 +81,7 @@ contract GeneralizedSwapMigrator is Ownable, BaseBoringBatchable {
                     "Failed to match tokens list"
                 );
             } catch {
-                require(i > 0, "Failed to get tokens underlying Saddle pool.");
+                require(i > 0, "Failed to get tokens underlying Pascal pool.");
                 require(
                     oldPoolToken == address(0) && i == mData.tokens.length,
                     "Failed to match tokens list"

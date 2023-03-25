@@ -11,7 +11,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
     skipIfAlreadyDeployed: true,
     args: [
-      (await get("TUR")).address,
+      (await get("PSC")).address,
       (await get("VotingEscrow")).address,
       (await get("DelegationProxy")).address,
       deployer, // set deployer as admin until all gauges are added

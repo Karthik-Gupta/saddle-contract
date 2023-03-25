@@ -16,15 +16,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const GAUGE_CONTROLLER_NAME = "GaugeController"
   const VOTING_ESCROW_NAME = "VotingEscrow"
   const MINTER_NAME = "Minter"
-  // after the TUR pair is setup use that pair to deploy FeeDistributor
-  //const FEE_DISTRIBUTOR_NAME = "FeeDistributor"
+  const FEE_DISTRIBUTOR_NAME = "FeeDistributor"
 
   const contractNamesToRegister = [
     GAUGE_HELPER_CONTRACT_NAME,
     GAUGE_CONTROLLER_NAME,
     VOTING_ESCROW_NAME,
     MINTER_NAME,
-    //FEE_DISTRIBUTOR_NAME,
+    FEE_DISTRIBUTOR_NAME,
   ]
 
   // Get the MasterRegistry contract

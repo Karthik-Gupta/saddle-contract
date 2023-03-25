@@ -28,7 +28,8 @@ export function isTestNetwork(networkId: string): boolean {
   return (
     networkId == CHAIN_ID.HARDHAT ||
     networkId == CHAIN_ID.ROPSTEN ||
-    networkId == CHAIN_ID.KOVAN
+    networkId == CHAIN_ID.KOVAN ||
+    networkId == CHAIN_ID.PULSECHAIN_TESTNET
   )
 }
 

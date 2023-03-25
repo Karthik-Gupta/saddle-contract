@@ -3,13 +3,13 @@ import { DeployFunction } from "hardhat-deploy/types"
 import { MULTISIG_ADDRESSES } from "../../utils/accounts"
 
 // Deployment names
-const POOL_NAME = "TuringEURPool"
+const POOL_NAME = "PascalEuroPool"
 const POOL_LP_TOKEN_NAME = `${POOL_NAME}LPToken`
 // Constructor arguments
-const TOKEN_NAMES = ["EURS", "SEUR", "EUROC"]
-const TOKEN_DECIMALS = [2, 18, 6]
-const LP_TOKEN_NAME = "Turing EURS/sEUR/EUROC"
-const LP_TOKEN_SYMBOL = "turingEUR"
+const TOKEN_NAMES = ["EURS", "EURT", "EUROC"]
+const TOKEN_DECIMALS = [2, 6, 6]
+const LP_TOKEN_NAME = "Pascal EURS/EURT/EUROC"
+const LP_TOKEN_SYMBOL = "pascalEuro"
 const INITIAL_A = 60
 const SWAP_FEE = 4e6 // 4bps
 const ADMIN_FEE = 0

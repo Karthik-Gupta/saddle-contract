@@ -11,13 +11,13 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
     skipIfAlreadyDeployed: true,
     args: [
-      (await get("TUR")).address,
-      "Vote-escrowed TUR",
-      "veTUR",
+      (await get("PSC")).address,
+      "Vote-escrowed PSC",
+      "vePSC",
       deployer, // temporarily set owner to deployer
     ],
   })
 }
 export default func
-func.tags = ["veTUR"]
-func.dependencies = ["TUR"]
+func.tags = ["vePSC"]
+func.dependencies = ["PSC"]

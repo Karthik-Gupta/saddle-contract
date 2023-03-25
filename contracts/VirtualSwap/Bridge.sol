@@ -163,7 +163,7 @@ contract Bridge is ERC721 {
      */
     constructor(address synthSwapperAddress)
         public
-        ERC721("Saddle Cross-Asset Swap", "SaddleSynthSwap")
+        ERC721("Pascal Cross-Asset Swap", "PascalSynthSwap")
     {
         SYNTH_SWAPPER_MASTER = synthSwapperAddress;
         updateExchangerCache();

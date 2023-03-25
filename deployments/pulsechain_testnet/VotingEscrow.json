@@ -1,5 +1,5 @@
 {
-  "address": "0x7110dE1A89F9171e249fB354E7a51e61C3aDcfa0",
+  "address": "0x27A00103deDE5d0f0366DC086Af3b95A9c882629",
   "abi": [
     {
       "name": "CommitOwnership",
@@ -146,8 +146,7 @@
           "type": "address"
         }
       ],
-      "outputs": [],
-      "gas": 39816
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -159,16 +158,14 @@
           "type": "address"
         }
       ],
-      "outputs": [],
-      "gas": 39475
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
       "type": "function",
       "name": "apply_transfer_ownership",
       "inputs": [],
-      "outputs": [],
-      "gas": 41566
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -180,16 +177,14 @@
           "type": "address"
         }
       ],
-      "outputs": [],
-      "gas": 37695
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
       "type": "function",
       "name": "apply_smart_wallet_checker",
       "inputs": [],
-      "outputs": [],
-      "gas": 39671
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -201,8 +196,7 @@
           "type": "bool"
         }
       ],
-      "outputs": [],
-      "gas": 39595
+      "outputs": []
     },
     {
       "stateMutability": "view",
@@ -219,8 +213,7 @@
           "name": "",
           "type": "int128"
         }
-      ],
-      "gas": 5184
+      ]
     },
     {
       "stateMutability": "view",
@@ -241,8 +234,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 2987
+      ]
     },
     {
       "stateMutability": "view",
@@ -259,16 +251,14 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 2972
+      ]
     },
     {
       "stateMutability": "nonpayable",
       "type": "function",
       "name": "checkpoint",
       "inputs": [],
-      "outputs": [],
-      "gas": 37283370
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -284,8 +274,7 @@
           "type": "uint256"
         }
       ],
-      "outputs": [],
-      "gas": 37481203
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -301,8 +290,7 @@
           "type": "uint256"
         }
       ],
-      "outputs": [],
-      "gas": 37489081
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -314,8 +302,7 @@
           "type": "uint256"
         }
       ],
-      "outputs": [],
-      "gas": 37485303
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
@@ -327,24 +314,21 @@
           "type": "uint256"
         }
       ],
-      "outputs": [],
-      "gas": 37492457
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
       "type": "function",
       "name": "withdraw",
       "inputs": [],
-      "outputs": [],
-      "gas": 37472579
+      "outputs": []
     },
     {
       "stateMutability": "nonpayable",
       "type": "function",
       "name": "force_withdraw",
       "inputs": [],
-      "outputs": [],
-      "gas": 37484659
+      "outputs": []
     },
     {
       "stateMutability": "view",
@@ -361,8 +345,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 12750
+      ]
     },
     {
       "stateMutability": "view",
@@ -383,8 +366,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 12750
+      ]
     },
     {
       "stateMutability": "view",
@@ -405,8 +387,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 793090
+      ]
     },
     {
       "stateMutability": "view",
@@ -418,8 +399,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 905206
+      ]
     },
     {
       "stateMutability": "view",
@@ -436,8 +416,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 905206
+      ]
     },
     {
       "stateMutability": "view",
@@ -454,8 +433,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 1287758
+      ]
     },
     {
       "stateMutability": "view",
@@ -467,8 +445,7 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3060
+      ]
     },
     {
       "stateMutability": "view",
@@ -480,8 +457,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 3090
+      ]
     },
     {
       "stateMutability": "view",
@@ -508,8 +484,7 @@
             }
           ]
         }
-      ],
-      "gas": 5543
+      ]
     },
     {
       "stateMutability": "view",
@@ -521,8 +496,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 3150
+      ]
     },
     {
       "stateMutability": "view",
@@ -557,8 +531,7 @@
             }
           ]
         }
-      ],
-      "gas": 9614
+      ]
     },
     {
       "stateMutability": "view",
@@ -597,8 +570,7 @@
             }
           ]
         }
-      ],
-      "gas": 9910
+      ]
     },
     {
       "stateMutability": "view",
@@ -615,8 +587,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 3506
+      ]
     },
     {
       "stateMutability": "view",
@@ -633,8 +604,7 @@
           "name": "",
           "type": "int128"
         }
-      ],
-      "gas": 3385
+      ]
     },
     {
       "stateMutability": "view",
@@ -646,8 +616,7 @@
           "name": "",
           "type": "string"
         }
-      ],
-      "gas": 13589
+      ]
     },
     {
       "stateMutability": "view",
@@ -659,8 +628,7 @@
           "name": "",
           "type": "string"
         }
-      ],
-      "gas": 11348
+      ]
     },
     {
       "stateMutability": "view",
@@ -672,8 +640,7 @@
           "name": "",
           "type": "uint256"
         }
-      ],
-      "gas": 3360
+      ]
     },
     {
       "stateMutability": "view",
@@ -685,8 +652,7 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3390
+      ]
     },
     {
       "stateMutability": "view",
@@ -698,8 +664,7 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3420
+      ]
     },
     {
       "stateMutability": "view",
@@ -711,8 +676,7 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3450
+      ]
     },
     {
       "stateMutability": "view",
@@ -724,8 +688,7 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3480
+      ]
     },
     {
       "stateMutability": "view",
@@ -737,8 +700,7 @@
           "name": "",
           "type": "bool"
         }
-      ],
-      "gas": 3510
+      ]
     },
     {
       "stateMutability": "view",
@@ -750,30 +712,29 @@
           "name": "",
           "type": "address"
         }
-      ],
-      "gas": 3540
+      ]
     }
   ],
-  "transactionHash": "0x97b2b0d670973efb592199626c38e831496ec05b14f5707b82a635e9bdff3a99",
+  "transactionHash": "0x1cda02db933fa3ea1c3b8f50ad671251df493a87154f5ece2114d7baadc7afaa",
   "receipt": {
     "to": null,
     "from": "0x5F60C39301EBC4f46EE8c51af666852d305c9e51",
-    "contractAddress": "0x7110dE1A89F9171e249fB354E7a51e61C3aDcfa0",
+    "contractAddress": "0x27A00103deDE5d0f0366DC086Af3b95A9c882629",
     "transactionIndex": 0,
     "gasUsed": "2624721",
     "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0xf37d15d0882bd1ec17a33c0691022edec160bed54b3258942c8927cb32e931d8",
-    "transactionHash": "0x97b2b0d670973efb592199626c38e831496ec05b14f5707b82a635e9bdff3a99",
+    "blockHash": "0xe26844d68a9a9742fbfa7f4ff94633abcadf217983a667924f7e4a9f1f909da9",
+    "transactionHash": "0x1cda02db933fa3ea1c3b8f50ad671251df493a87154f5ece2114d7baadc7afaa",
     "logs": [],
-    "blockNumber": 18656278,
+    "blockNumber": 23491047,
     "cumulativeGasUsed": "2624721",
     "status": 1,
     "byzantium": true
   },
   "args": [
-    "0x5B785391Fb04D394364C5230B15cf2026dA1B450",
-    "Vote-escrowed TUR",
-    "veTUR",
+    "0xCd26C79c6b9763bB9639fCDe3BA67Bd3F27f4b1B",
+    "Vote-escrowed PSC",
+    "vePSC",
     "0x5F60C39301EBC4f46EE8c51af666852d305c9e51"
   ],
   "numDeployments": 1,
