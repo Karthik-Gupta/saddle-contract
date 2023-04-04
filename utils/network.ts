@@ -13,7 +13,7 @@ export const CHAIN_ID: Record<string, string> = {
   EVMOS_MAINNET: "9001",
   KAVA_TESTNET: "2221",
   KAVA_MAINNET: "2222",
-  PULSECHAIN_TESTNET: "941",
+  PULSECHAIN_TESTNET: "942",
 }
 
 export function isMainnet(networkId: string): boolean {
@@ -50,5 +50,5 @@ export const ALCHEMY_BASE_URL = {
   [CHAIN_ID.ROPSTEN]: "https://eth-ropsten.alchemyapi.io/v2/",
   [CHAIN_ID.ARBITRUM_MAINNET]: "https://arb-mainnet.g.alchemy.com/v2/",
   [CHAIN_ID.ARBITRUM_TESTNET]: "https://arb-rinkeby.g.alchemy.com/v2/",
-  [CHAIN_ID.PULSECHAIN_TESTNET]: "https://rpc.v2b.testnet.pulsechain.com",
+  [CHAIN_ID.PULSECHAIN_TESTNET]: "https://rpc.v3.testnet.pulsechain.com",
 }
