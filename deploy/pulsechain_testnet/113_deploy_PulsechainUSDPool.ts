@@ -5,9 +5,9 @@ import { DeployFunction } from "hardhat-deploy/types"
 const BASE_POOL_NAME = "PulseChainUSDPool"
 const BASE_POOL_LP_TOKEN_NAME = `${BASE_POOL_NAME}LPToken`
 // Constructor arguments
-const TOKEN_NAMES = ["CST", "PWC", "USDL"]
+const TOKEN_NAMES = ["CST", "PXDC", "USDL"]
 const TOKEN_DECIMALS = [18, 8, 18]
-const LP_TOKEN_NAME = "Pulsechain CST/PWC/USDL"
+const LP_TOKEN_NAME = "Pulsechain CST/PXDC/USDL"
 const LP_TOKEN_SYMBOL = "pulsechainUSD"
 const INITIAL_A = 500
 const SWAP_FEE = 3e6 // 3bps

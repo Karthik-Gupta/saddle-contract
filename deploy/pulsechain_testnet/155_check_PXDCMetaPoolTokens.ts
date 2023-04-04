@@ -1,11 +1,10 @@
-import { HardhatRuntimeEnvironment } from "hardhat/types"
 import { DeployFunction } from "hardhat-deploy/types"
+import { HardhatRuntimeEnvironment } from "hardhat/types"
 import { isTestNetwork } from "../../utils/network"
 import { BigNumber } from "ethers"
 
-const ETH_TOKENS_ARGS: { [token: string]: any[] } = {
-  WETH: ["Wrapped Ether", "WETH", "18"],
-  STETH: ["Lido Staked ETH", "stETH", "18"],
+const TOKENS_ARGS: { [token: string]: any[] } = {
+  PXDC: ["PXDC", "PXDC", "8"],
 }
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
@@ -13,17 +12,17 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deploy, execute } = deployments
   const { deployer } = await getNamedAccounts()
 
-  for (const token in ETH_TOKENS_ARGS) {
+  for (const token in TOKENS_ARGS) {
     await deploy(token, {
       from: deployer,
       log: true,
       contract: "GenericERC20",
-      args: ETH_TOKENS_ARGS[token],
+      args: TOKENS_ARGS[token],
       skipIfAlreadyDeployed: true,
     })
     // If it's on testnet, mint test tokens
     if (isTestNetwork(await getChainId())) {
-      const decimals = ETH_TOKENS_ARGS[token][2]
+      const decimals = TOKENS_ARGS[token][2]
       await execute(
         token,
         { from: deployer, log: true },
@@ -35,4 +34,5 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   }
 }
 export default func
-func.tags = ["ETHPoolTokens"]
+func.tags = ["PXDCMetaPoolTokens"]
+func.dependencies = ["USDPoolTokens"]

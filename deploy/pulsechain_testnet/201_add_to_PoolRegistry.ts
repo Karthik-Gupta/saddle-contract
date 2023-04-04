@@ -54,16 +54,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       isRemoved: false,
       isGuarded: false,
     },
-    {
-      poolAddress: (await get("PascalEuroPool")).address,
-      typeOfAsset: PoolType.OTHERS,
-      poolName: ethers.utils.formatBytes32String("PascalEuro"),
-      targetAddress: (await get("SwapFlashLoan")).address,
-      metaSwapDepositAddress: ZERO_ADDRESS,
-      isSaddleApproved: true,
-      isRemoved: false,
-      isGuarded: false,
-    },
     //meta pool
     {
       poolAddress: (await get("PascalFRAXMetaPool")).address,
@@ -96,11 +86,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       isGuarded: false,
     },
     {
-      poolAddress: (await get("PascalPWCMetaPool")).address,
+      poolAddress: (await get("PascalPXDCMetaPool")).address,
       typeOfAsset: PoolType.USD,
-      poolName: ethers.utils.formatBytes32String("PascalPWC-USD"),
-      targetAddress: (await get("PascalPWCMetaPool")).address,
-      metaSwapDepositAddress: (await get("PascalPWCMetaPoolDeposit")).address,
+      poolName: ethers.utils.formatBytes32String("PascalPXDC-USD"),
+      targetAddress: (await get("PascalPXDCMetaPool")).address,
+      metaSwapDepositAddress: (await get("PascalPXDCMetaPoolDeposit")).address,
       isSaddleApproved: true,
       isRemoved: false,
       isGuarded: false,

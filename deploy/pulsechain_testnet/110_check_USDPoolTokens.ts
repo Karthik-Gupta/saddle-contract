@@ -22,17 +22,16 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       args: USD_TOKENS_ARGS[token],
       skipIfAlreadyDeployed: true,
     })
-    // If it's on hardhat, mint test tokens
-    /* if (isTestNetwork(await getChainId())) {
+    if (isTestNetwork(await getChainId())) {
       const decimals = USD_TOKENS_ARGS[token][2]
       await execute(
         token,
         { from: deployer, log: true },
         "mint",
         deployer,
-        BigNumber.from(10).pow(decimals).mul(1000000),
+        BigNumber.from(10).pow(decimals).mul(10000000),
       )
-    } */
+    }
   }
 }
 export default func

@@ -5,7 +5,7 @@ import { BigNumber } from "ethers"
 
 const PULSECHAIN_USD_TOKENS_ARGS: { [token: string]: any[] } = {
   CST: ["CST", "CST", "18"],
-  PWC: ["PWC", "PWC", "8"],
+  PXDC: ["PXDC", "PXDC", "8"],
   USDL: ["USDL", "USDL", "18"],
 }
 
@@ -24,17 +24,17 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         args: PULSECHAIN_USD_TOKENS_ARGS[token],
         skipIfAlreadyDeployed: true,
       })
-      // If it's on hardhat, mint test tokens
-      /* if (isTestNetwork(await getChainId())) {
+      // If it's on testnet, mint test tokens
+      if (isTestNetwork(await getChainId())) {
         const decimals = PULSECHAIN_USD_TOKENS_ARGS[token][2]
         await execute(
           token,
           { from: deployer, log: true },
           "mint",
           deployer,
-          BigNumber.from(10).pow(decimals).mul(100000000),
+          BigNumber.from(10).pow(decimals).mul(10000000),
         )
-      } */
+      }
     } else {
       log(`reusing ${token} at ${token_contracts.address}`)
     }

@@ -26,11 +26,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // TODO: set production initial weight values
   // TODO: add crosschain root gauges
   const newGaugeArr = [
-    { lpToken: "PascalUSDPoolLPToken", gaugeType: 0, initialWeight: 3495 },
-    { lpToken: "PulseChainUSDPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    { lpToken: "PascalUSDPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    { lpToken: "PulseChainUSDPoolLPToken", gaugeType: 0, initialWeight: 8995 },
     { lpToken: "PascalBTCPoolLPToken", gaugeType: 0, initialWeight: 5500 },
     { lpToken: "PascalETHPoolLPToken", gaugeType: 0, initialWeight: 5500 },
-    { lpToken: "PascalEuroPoolLPToken", gaugeType: 0, initialWeight: 5500 },
     {
       lpToken: "PascalFRAXMetaPoolLPToken",
       gaugeType: 0,
@@ -47,7 +46,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       initialWeight: 5500,
     },
     {
-      lpToken: "PascalPWCMetaPoolLPToken",
+      lpToken: "PascalPXDCMetaPoolLPToken",
       gaugeType: 0,
       initialWeight: 5500,
     },
