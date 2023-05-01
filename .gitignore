@@ -8,6 +8,12 @@ node_modules/*
 .eslintcache
 docs
 
+# Certora
+.certora*
+.last_confs
+certora_*
+resource_errors.json
+
 ### macOS ###
 # General
 .DS_Store
@@ -44,3 +50,8 @@ deployments/optimistic/
 
 # VS Code
 .vscode/
+
+# Forge
+forge-cache
+forge-out
+output
