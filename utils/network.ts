@@ -20,7 +20,7 @@ export const CHAIN_ID: Record<string, string> = {
   KAVA_MAINNET: "2222",
   AURORA_MAINNET: "1313161554",
   BASE_TESTNET: "84531",
-  PULSECHAIN_TESTNET: "942",
+  PULSECHAIN_TESTNET: "943",
 }
 
 // Reverse lookup of chainId to chain name
@@ -70,5 +70,5 @@ export const ALCHEMY_BASE_URL = {
   [CHAIN_ID.OPTIMISM_MAINNET]: "https://opt-mainnet.g.alchemy.com/v2/",
   [CHAIN_ID.ARBITRUM_MAINNET]: "https://arb-mainnet.g.alchemy.com/v2/",
   [CHAIN_ID.ARBITRUM_TESTNET]: "https://arb-rinkeby.g.alchemy.com/v2/",
-  [CHAIN_ID.PULSECHAIN_TESTNET]: "https://rpc.v3.testnet.pulsechain.com",
+  [CHAIN_ID.PULSECHAIN_TESTNET]: "https://rpc.v4.testnet.pulsechain.com",
 }
