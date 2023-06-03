@@ -1,6 +1,5 @@
 import chai from "chai"
 import { ethers } from "hardhat"
-import { solidity } from "ethereum-waffle"
 const { expect } = chai
 import {
   GaugeController,
@@ -22,7 +21,6 @@ import {
   setTimestamp,
   BIG_NUMBER_ZERO,
 } from "../test/testUtils"
-chai.use(solidity)
 
 /**
  * Adds liquidity to all pools with a gauge.

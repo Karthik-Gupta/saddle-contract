@@ -29,7 +29,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     { lpToken: "PascalUSDPoolLPToken", gaugeType: 0, initialWeight: 5500 },
     { lpToken: "PulseChainUSDPoolLPToken", gaugeType: 0, initialWeight: 8995 },
     { lpToken: "PascalBTCPoolLPToken", gaugeType: 0, initialWeight: 5500 },
-    { lpToken: "PascalETHPoolLPToken", gaugeType: 0, initialWeight: 5500 },
+    /* { lpToken: "PascalETHPoolLPToken", gaugeType: 0, initialWeight: 5500 }, */
     {
       lpToken: "PascalFRAXMetaPoolLPToken",
       gaugeType: 0,

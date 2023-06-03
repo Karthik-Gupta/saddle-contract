@@ -4,7 +4,7 @@ import { isTestNetwork } from "../../utils/network"
 import { BigNumber } from "ethers"
 
 const TOKENS_ARGS: { [token: string]: any[] } = {
-  TBTC: ["tBTC", "tbtc", "18"],
+  TBTC: ["tBTC", "TBTC", "18"],
 }
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {

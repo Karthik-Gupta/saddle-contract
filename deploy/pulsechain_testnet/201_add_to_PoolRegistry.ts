@@ -44,7 +44,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       isRemoved: false,
       isGuarded: false,
     },
-    {
+    /*     {
       poolAddress: (await get("PascalETHPool")).address,
       typeOfAsset: PoolType.ETH,
       poolName: ethers.utils.formatBytes32String("PascalETH"),
@@ -54,7 +54,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       isRemoved: false,
       isGuarded: false,
     },
-    //meta pool
+ */ //meta pool
     {
       poolAddress: (await get("PascalFRAXMetaPool")).address,
       typeOfAsset: PoolType.USD,

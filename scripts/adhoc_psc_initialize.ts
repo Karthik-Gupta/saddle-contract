@@ -5,15 +5,11 @@ import {
   PSC,
 } from "../build/typechain"
 
-import chai from "chai"
 import { ethers } from "hardhat"
-import { solidity } from "ethereum-waffle"
-import { setTimestamp } from "../test/testUtils"
 import { timestampToUTCString } from "../utils/time"
-
-const { expect } = chai
-
-chai.use(solidity)
+import { BIG_NUMBER_1E18 } from "../test/testUtils"
+import { MULTISIG_ADDRESSES } from "../utils/accounts"
+import { CHAIN_ID } from "../utils/network"
 
 // Time related constants
 const DAY = 86400
@@ -31,6 +27,7 @@ async function main() {
     "GaugeController",
   )) as GaugeController
 
+  /*
   console.log("psc paused : ", await psc.paused())
 
   let rewardRate = await minter.rate()
@@ -105,6 +102,20 @@ async function main() {
   // Advance the epoch to next timestamp when intial weights kick in
   // Uncomment below line if you want to see the intial weights applied
   // await setTimestamp(gaugeStartTime.toNumber())
+  */
+
+  // Multisig account is the account that will be used as ownership admin in vepsc contracts.
+  const multisigSigner = await ethers.getSigner(
+    MULTISIG_ADDRESSES[CHAIN_ID.PULSECHAIN_TESTNET],
+  )
+
+  // Send PSC to Minter contract
+  // 60_000_000 over 6 months
+  await psc
+    .connect(multisigSigner)
+    .transfer(minter.address, BIG_NUMBER_1E18.mul(10_000_000))
+  console.log(`SEQ 21300: Sent PSC to Minter`)
+  console.log("AFTER sending PSC to minter")
 }
 
 main()
