@@ -1,15 +1,18 @@
 import {
   GaugeController,
   LiquidityGaugeV5,
+  IPoolRegistry,
   Minter,
+  PoolRegistry,
   PSC,
 } from "../build/typechain"
 
 import { ethers } from "hardhat"
 import { timestampToUTCString } from "../utils/time"
-import { BIG_NUMBER_1E18 } from "../test/testUtils"
+import { BIG_NUMBER_1E18, ZERO_ADDRESS } from "../test/testUtils"
 import { MULTISIG_ADDRESSES } from "../utils/accounts"
 import { CHAIN_ID } from "../utils/network"
+import { PoolType } from "../utils/constants"
 
 // Time related constants
 const DAY = 86400
@@ -26,6 +29,7 @@ async function main() {
   const gaugeController = (await ethers.getContract(
     "GaugeController",
   )) as GaugeController
+  const poolReg = (await ethers.getContract("PoolRegistry")) as PoolRegistry
 
   /*
   console.log("psc paused : ", await psc.paused())
@@ -109,6 +113,7 @@ async function main() {
     MULTISIG_ADDRESSES[CHAIN_ID.PULSECHAIN_TESTNET],
   )
 
+  /*
   // Send PSC to Minter contract
   // 60_000_000 over 6 months
   await psc
@@ -116,6 +121,49 @@ async function main() {
     .transfer(minter.address, BIG_NUMBER_1E18.mul(10_000_000))
   console.log(`SEQ 21300: Sent PSC to Minter`)
   console.log("AFTER sending PSC to minter")
+  */
+
+  const pools: IPoolRegistry.PoolInputDataStruct[] = [
+    //base pools
+    {
+      poolAddress: (await ethers.getContract("PulseChainUSDPool")).address,
+      typeOfAsset: PoolType.USD,
+      poolName: ethers.utils.formatBytes32String("PulseChainUSD"),
+      targetAddress: (await ethers.getContract("SwapFlashLoan")).address,
+      metaSwapDepositAddress: ZERO_ADDRESS,
+      isSaddleApproved: true,
+      isRemoved: false,
+      isGuarded: false,
+    },
+    {
+      poolAddress: (await ethers.getContract("PascalPXDCMetaPool")).address,
+      typeOfAsset: PoolType.USD,
+      poolName: ethers.utils.formatBytes32String("PascalPXDC-USD"),
+      targetAddress: (await ethers.getContract("PascalPXDCMetaPool")).address,
+      metaSwapDepositAddress: (
+        await ethers.getContract("PascalPXDCMetaPoolDeposit")
+      ).address,
+      isSaddleApproved: true,
+      isRemoved: false,
+      isGuarded: false,
+    },
+    {
+      poolAddress: (await ethers.getContract("PascalUSDLMetaPool")).address,
+      typeOfAsset: PoolType.USD,
+      poolName: ethers.utils.formatBytes32String("PascalUSDL-USD"),
+      targetAddress: (await ethers.getContract("PascalUSDLMetaPool")).address,
+      metaSwapDepositAddress: (
+        await ethers.getContract("PascalUSDLMetaPoolDeposit")
+      ).address,
+      isSaddleApproved: true,
+      isRemoved: false,
+      isGuarded: false,
+    },
+  ]
+
+  await pools.forEach((pool) => {
+    poolReg.connect(multisigSigner).addPool(pool)
+  })
 }
 
 main()
