@@ -8,7 +8,7 @@ const META_POOL_LP_TOKEN_NAME = `${META_POOL_NAME}LPToken`
 const BASE_POOL_NAME = "PascalUSDPool"
 // Constructor arguments
 const TOKEN_NAMES = ["PXDC", `${BASE_POOL_NAME}LPToken`]
-const TOKEN_DECIMALS = [8, 18]
+const TOKEN_DECIMALS = [18, 18]
 const LP_TOKEN_NAME = "Pascal PXDC/USD"
 const LP_TOKEN_SYMBOL = "pascalPXDC-USD"
 const INITIAL_A = 100

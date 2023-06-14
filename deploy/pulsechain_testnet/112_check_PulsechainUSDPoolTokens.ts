@@ -5,7 +5,7 @@ import { BigNumber } from "ethers"
 
 const PULSECHAIN_USD_TOKENS_ARGS: { [token: string]: any[] } = {
   CST: ["CST", "CST", "18"],
-  PXDC: ["PXDC", "PXDC", "8"],
+  PXDC: ["PXDC", "PXDC", "18"],
   USDL: ["USDL", "USDL", "18"],
 }
 

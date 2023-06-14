@@ -164,6 +164,12 @@ async function main() {
   await pools.forEach((pool) => {
     poolReg.connect(multisigSigner).addPool(pool)
   })
+
+  // writing to contract directly using adPool()
+  // base pool
+  // ["0xC070B77966a58F17E1ce3ca5210b174AE4CE094c",2,"0x50756c7365436861696e55534400000000000000000000000000000000000000","0x0bea00cb5d14f5a808aeee571c84b499a62e6930","0x0000000000000000000000000000000000000000",true,false,false]
+  // meta pool
+  // ["0x0466Cb515Ec65fdbBcD1492316dB977dE9FBE8A4",2,"0x50617363616c505844432d555344000000000000000000000000000000000000","0x0466Cb515Ec65fdbBcD1492316dB977dE9FBE8A4,0x103e491044b416d9eceA90C58778b20f66237add",true,false,false]
 }
 
 main()

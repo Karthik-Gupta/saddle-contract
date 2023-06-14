@@ -6,7 +6,7 @@ const BASE_POOL_NAME = "PulseChainUSDPool"
 const BASE_POOL_LP_TOKEN_NAME = `${BASE_POOL_NAME}LPToken`
 // Constructor arguments
 const TOKEN_NAMES = ["CST", "PXDC", "USDL"]
-const TOKEN_DECIMALS = [18, 8, 18]
+const TOKEN_DECIMALS = [18, 18, 18]
 const LP_TOKEN_NAME = "Pulsechain CST/PXDC/USDL"
 const LP_TOKEN_SYMBOL = "pulsechainUSD"
 const INITIAL_A = 500

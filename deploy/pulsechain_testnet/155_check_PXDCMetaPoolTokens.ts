@@ -4,7 +4,7 @@ import { isTestNetwork } from "../../utils/network"
 import { BigNumber } from "ethers"
 
 const TOKENS_ARGS: { [token: string]: any[] } = {
-  PXDC: ["PXDC", "PXDC", "8"],
+  PXDC: ["PXDC", "PXDC", "18"],
 }
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
