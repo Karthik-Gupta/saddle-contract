@@ -1,18 +1,8 @@
-import {
-  GaugeController,
-  LiquidityGaugeV5,
-  IPoolRegistry,
-  Minter,
-  PoolRegistry,
-  PSC,
-} from "../build/typechain"
+import { GaugeController, Minter, PoolRegistry, PSC } from "../build/typechain"
 
 import { ethers } from "hardhat"
-import { timestampToUTCString } from "../utils/time"
-import { BIG_NUMBER_1E18, ZERO_ADDRESS } from "../test/testUtils"
 import { MULTISIG_ADDRESSES } from "../utils/accounts"
 import { CHAIN_ID } from "../utils/network"
-import { PoolType } from "../utils/constants"
 
 // Time related constants
 const DAY = 86400
@@ -123,6 +113,7 @@ async function main() {
   console.log("AFTER sending PSC to minter")
   */
 
+  /*
   const pools: IPoolRegistry.PoolInputDataStruct[] = [
     //base pools
     {
@@ -164,12 +155,35 @@ async function main() {
   await pools.forEach((pool) => {
     poolReg.connect(multisigSigner).addPool(pool)
   })
+  
 
   // writing to contract directly using adPool()
   // base pool
   // ["0xC070B77966a58F17E1ce3ca5210b174AE4CE094c",2,"0x50756c7365436861696e55534400000000000000000000000000000000000000","0x0bea00cb5d14f5a808aeee571c84b499a62e6930","0x0000000000000000000000000000000000000000",true,false,false]
   // meta pool
   // ["0x0466Cb515Ec65fdbBcD1492316dB977dE9FBE8A4",2,"0x50617363616c505844432d555344000000000000000000000000000000000000","0x0466Cb515Ec65fdbBcD1492316dB977dE9FBE8A4,0x103e491044b416d9eceA90C58778b20f66237add",true,false,false]
+  */
+
+  // to remove the unwanted gauges, call set_killed(true) on the gauge contracts
+  // if the programatical way is missed, use remix
+  // remix: get the ABI of the contract
+  // create a file with .abi extension
+  // under deploy & run transactions - injected provider
+  // Load contract from address -> contract address
+  ;(await ethers.getContract("0xDEd5EfDf13A699C27012165351dfD49879F5ace5"))
+    .connect(multisigSigner)
+    .set_killed(true)
+
+  /*
+  Invalidated gauges
+  0xDEd5EfDf13A699C27012165351dfD49879F5ace5
+  0x9Fd1fB28F6563094Fd323afFF5F8d726cf2C13F6
+  0xE87a1bff33eF042Ac4fa59D2E37C3d76f5E26024
+  0xecbA2CB75A42B0eC3009877873F0e83c5F64f4cc
+  0x1b3E038FD8F9fEC4c13fb150E50cc22931Fa908d
+  0xbD2303a6402e6FB9160d7db2E8d22EcF7478331B
+
+  */
 }
 
 main()
