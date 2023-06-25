@@ -18,11 +18,11 @@ import { HttpNetworkUserConfig } from "hardhat/types"
 import { chainConfig } from "@nomiclabs/hardhat-etherscan/dist/src/ChainConfig"
 
 dotenv.config()
-chainConfig["pulsechain_testnet"] = {
-  chainId: 943,
+chainConfig["pulsechain_mainnet"] = {
+  chainId: 369,
   urls: {
-    apiURL: "https://scan.v4.testnet.pulsechain.com/api",
-    browserURL: "https://scan.v4.testnet.pulsechain.com/",
+    apiURL: "https://scan.pulsechain.com/api",
+    browserURL: "https://scan.pulsechain.com/",
   },
 }
 
@@ -33,6 +33,14 @@ if (process.env.HARDHAT_FORK) {
 let config: HardhatUserConfig = {
   defaultNetwork: "pulsechain_testnet",
   networks: {
+    pulsechain_mainnet: {
+      url: ALCHEMY_BASE_URL[CHAIN_ID.PULSECHAIN_MAINNET],
+      chainId: 369,
+      accounts: {
+        mnemonic: process.env.MNEMONIC_TEST_ACCOUNT,
+      },
+      deploy: ["./deploy/pulsechain/"],
+    },
     pulsechain_testnet: {
       url: ALCHEMY_BASE_URL[CHAIN_ID.PULSECHAIN_TESTNET],
       chainId: 943,
@@ -52,7 +60,7 @@ let config: HardhatUserConfig = {
   etherscan: {
     // needed for contract verification
     apiKey: {
-      pulsechain_testnet: "0",
+      pulsechain_mainnet: "0",
     },
   },
   paths: {
@@ -130,14 +138,17 @@ let config: HardhatUserConfig = {
     deployer: {
       default: 0, // here this will by default take the first account as deployer
       943: 0, //it will take the first account as deployer. Note though that depending on how hardhat network are configured, the account 0 on one network can be different than on another
+      369: 0,
     },
     libraryDeployer: {
       default: 1, // use a different account for deploying libraries on the hardhat network
       943: 0, // use the same addess on pulsechain testnet
+      369: 0,
     },
     multisig: {
       default: 0,
       943: MULTISIG_ADDRESSES[943],
+      369: MULTISIG_ADDRESSES[369],
     },
   },
   spdxLicenseIdentifier: {

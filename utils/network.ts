@@ -21,6 +21,7 @@ export const CHAIN_ID: Record<string, string> = {
   AURORA_MAINNET: "1313161554",
   BASE_TESTNET: "84531",
   PULSECHAIN_TESTNET: "943",
+  PULSECHAIN_MAINNET: "369",
 }
 
 // Reverse lookup of chainId to chain name
@@ -41,7 +42,8 @@ export function isMainnet(networkId: string): boolean {
     networkId == CHAIN_ID.FANTOM_MAINNET ||
     networkId == CHAIN_ID.EVMOS_MAINNET ||
     networkId == CHAIN_ID.KAVA_MAINNET ||
-    networkId == CHAIN_ID.AURORA_MAINNET
+    networkId == CHAIN_ID.AURORA_MAINNET ||
+    networkId == CHAIN_ID.PULSECHAIN_MAINNET
   )
 }
 
@@ -71,4 +73,5 @@ export const ALCHEMY_BASE_URL = {
   [CHAIN_ID.ARBITRUM_MAINNET]: "https://arb-mainnet.g.alchemy.com/v2/",
   [CHAIN_ID.ARBITRUM_TESTNET]: "https://arb-rinkeby.g.alchemy.com/v2/",
   [CHAIN_ID.PULSECHAIN_TESTNET]: "https://rpc.v4.testnet.pulsechain.com",
+  [CHAIN_ID.PULSECHAIN_MAINNET]: "https://rpc.pulsechain.com",
 }
